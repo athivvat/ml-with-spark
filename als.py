@@ -22,5 +22,5 @@ actualRates = rd.sortByKey().map(lambda r: r[1])
 
 ratesAndPreds = actualRates.zip(predictions)
 
-MSE = ratesAndPreds.map(lambda r: (r[0] - r[1])**2).reduce(lambda x, y: x + y/ratesAndPreds.count())
+MSE = ratesAndPreds.map(lambda r: (r[0] - r[1])**2).reduce(lambda x, y: x + y)/ratesAndPreds.count()
 print("Mean Squared Error = " + str(MSE))
