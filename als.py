@@ -1,6 +1,7 @@
+# Recommendation model using Alternating Least Squares
+
 from pyspark import SparkContext
 from pyspark.mllib.recommendation import ALS
-from numpy import array
 
 sc = SparkContext(appName='als')
 
