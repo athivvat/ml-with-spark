@@ -5,7 +5,7 @@ from numpy import array
 sc = SparkContext(appName='als')
 
 # Load and parse the data
-data = sc.textFile("/Users/80094/Workspace/labs/ml-with-spark/test.data")
+data = sc.textFile("/user/cloudera/test.data")
 ratings = data.map(lambda line: line.split(',')).map(lambda r: (int(r[0]), int(r[1]), float(r[2])))
 
 # Build the recommendation model using Alternating Least Squares
